@@ -1,0 +1,375 @@
+/* Основные стили */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Градиент для заголовков карточек */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Анимации для кнопок */
+.btn {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Стили для карточек */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-header {
+    border-radius: 12px 12px 0 0 !important;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+/* Стили для форм */
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+/* Стили для алертов */
+.alert {
+    border-radius: 8px;
+    border: none;
+}
+
+/* Стили для статистических карточек */
+.card.bg-primary, .card.bg-warning, .card.bg-danger, .card.bg-success {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.card.bg-primary:hover, .card.bg-warning:hover, .card.bg-danger:hover, .card.bg-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Стили для навигации */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+/* Стили для результатов */
+.result-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.result-high {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+}
+
+.result-medium {
+    background: linear-gradient(135deg, #feca57 0%, #ff9ff3 100%);
+}
+
+.result-low {
+    background: linear-gradient(135deg, #48dbfb 0%, #0abde3 100%);
+}
+
+/* Анимации загрузки */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Стили для графиков */
+#monthlyChart, #paymentChart, #regionChart, #amountChart {
+    min-height: 300px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* Стили для чекбоксов */
+.form-check-input:checked {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+/* Стили для списков */
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    padding: 12px 0;
+}
+
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Стили для бейджей */
+.badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+}
+
+/* Стили для иконок */
+.fa-2x {
+    margin-bottom: 10px;
+}
+
+/* Стили для таблиц */
+.table {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    border: none;
+    font-weight: 600;
+}
+
+/* Стили для модальных окон */
+.modal-content {
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 12px 12px 0 0;
+}
+
+/* Стили для тултипов */
+.tooltip {
+    font-size: 0.875rem;
+}
+
+/* Стили для прогресс-баров */
+.progress {
+    border-radius: 8px;
+    height: 8px;
+}
+
+.progress-bar {
+    border-radius: 8px;
+}
+
+/* Стили для спиннеров */
+.spinner-border {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Стили для уведомлений */
+.toast {
+    border-radius: 8px;
+    border: none;
+}
+
+/* Стили для пагинации */
+.pagination .page-link {
+    border-radius: 6px;
+    margin: 0 2px;
+    border: none;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #667eea;
+    border-color: #667eea;
+}
+
+/* Стили для дропдаунов */
+.dropdown-menu {
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Стили для табов */
+.nav-tabs .nav-link {
+    border-radius: 8px 8px 0 0;
+    border: none;
+    color: #6c757d;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #667eea;
+    color: white;
+    border: none;
+}
+
+/* Стили для аккордеонов */
+.accordion-button {
+    border-radius: 8px;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #667eea;
+    color: white;
+}
+
+/* Стили для карусели */
+.carousel {
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Стили для карточек с изображениями */
+.card-img-top {
+    border-radius: 12px 12px 0 0;
+}
+
+/* Стили для футера */
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Стили для боковой панели */
+.sidebar {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+/* Стили для основного контента */
+.main-content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* Стили для параграфов */
+p {
+    line-height: 1.6;
+    color: #6c757d;
+}
+
+/* Стили для ссылок */
+a {
+    color: #667eea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5a6fd8;
+    text-decoration: none;
+}
+
+/* Стили для кода */
+code {
+    background-color: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+/* Стили для блоков кода */
+pre {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    border: 1px solid #e9ecef;
+}
+
+/* Стили для изображений */
+.nav-item img {
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+.nav-item img:hover {
+    transform: scale(1.1);
+    opacity: 1 !important;
+}
+
+.card-header img {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.card-header img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+/* Адаптивность для изображений */
+@media (max-width: 768px) {
+    .nav-item img {
+        max-height: 30px !important;
+    }
+    
+    .card-header img {
+        max-height: 40px !important;
+    }
+}
+
+/* Стили для цитат */
+blockquote {
+    border-left: 4px solid #667eea;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+    color: #6c757d;
+} 

@@ -1,0 +1,11 @@
+/__pycache__/
+/venv/
+/venv/*
+/venv/bin/*
+/venv/bin/activate
+/venv/bin/activate.bat
+/venv/bin/activate.fish
+/venv/bin/activate.ps1
+/venv/bin/activate.sh
+/venv/bin/activate.csh
+/venv/bin/activate.tcsh
