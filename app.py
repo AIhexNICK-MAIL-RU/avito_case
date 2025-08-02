@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 import pandas as pd
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
@@ -14,6 +15,7 @@ import plotly.utils
 import plotly.express as px
 
 app = Flask(__name__)
+CORS(app)  # Разрешаем CORS для всех доменов
 
 # Глобальные переменные для модели
 model = None
@@ -301,4 +303,18 @@ def get_features():
 if __name__ == '__main__':
     # Пытаемся загрузить модель при запуске
     load_model()
-    app.run(debug=True, host='0.0.0.0', port=5001) 
+    
+    # Настройки для внешнего доступа
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('FLASK_DEBUG', 'False').lower() == 'true'
+    
+    print(f"🚀 Сервер запускается на http://0.0.0.0:{port}")
+    print(f"📱 Для доступа с других устройств используйте: http://[ВАШ_IP]:{port}")
+    print(f"🔧 Режим отладки: {debug}")
+    
+    app.run(
+        debug=debug, 
+        host='0.0.0.0',  # Слушаем на всех интерфейсах
+        port=port,
+        threaded=True  # Поддержка многопоточности
+    ) 
